@@ -1,0 +1,125 @@
+/* Minimālistisks stils */
+:root{
+  --max-width:1000px;
+  --accent:#111;
+  --muted:#888;
+  --gap:24px;
+  --container-padding:20px;
+  --border:#e0e0e0;
+  --bg:#fff;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:var(--bg); color:var(--accent); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px var(--container-padding);
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  background:linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+  backdrop-filter: blur(4px);
+  z-index:10;
+}
+
+.logo{
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:0.06em;
+  padding:6px 8px;
+  border-radius:6px;
+  background:transparent;
+  min-width:64px;
+  text-align:center;
+}
+
+.main-nav{
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+.main-nav .nav-link{
+  text-decoration:none;
+  color:var(--accent);
+  font-size:14px;
+  padding:6px 8px;
+}
+
+.main-nav .nav-link.current{
+  border-bottom:2px solid var(--accent);
+  padding-bottom:4px;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:32px auto;
+  padding:0 var(--container-padding);
+}
+
+/* Sākuma lapa */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1{font-size:32px;margin:0 0 12px}
+.hero .lead{color:var(--muted); margin:0;}
+
+/* Par mani kaste ar apmalēm kreisajā un labajā pusē */
+.content-box{
+  max-width:800px;
+  margin:0 auto;
+  padding:40px 48px;
+  /* tikai kreisā un labā apmale redzama */
+  border-left:1px solid var(--border);
+  border-right:1px solid var(--border);
+  text-align:center;
+  background:transparent;
+}
+
+.page-title{
+  font-size:28px;
+  letter-spacing:0.08em;
+  margin:0 0 24px;
+}
+
+.photo{
+  width:220px;
+  height:220px;
+  margin:0 auto 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.04);
+}
+
+.description{
+  color:var(--muted);
+  line-height:1.6;
+  margin:8px 0 0;
+  font-size:15px;
+}
+
+/* Footer */
+.site-footer{
+  border-top:1px solid var(--border);
+  text-align:center;
+  padding:18px 10px;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:48px;
+}
+
+/* Responsīvs uzlabojums */
+@media (max-width:600px){
+  .site-header{padding:12px 14px}
+  .hero{padding:48px 12px}
+  .content-box{padding:28px 18px; border-left:0; border-right:0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
+  .photo{width:160px;height:160px}
+}

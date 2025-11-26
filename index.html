@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sākums — Mans Bizness</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">LOGO</div>
+    <nav class="main-nav" aria-label="Galvenā navigācija">
+      <a href="index.html" class="nav-link">Sākums</a>
+      <a href="par-mani.html" class="nav-link">Par mani</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Laipni lūgti!</h1>
+      <p class="lead">Vienkārša un minimālistiska mājaslapa tava biznesa prezentācijai.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Mans Bizness</p>
+  </footer>
+
+  <script>
+    // viegls skripts gadam
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

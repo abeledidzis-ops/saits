@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Par mani — Mans Bizness</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">LOGO</div>
+    <nav class="main-nav" aria-label="Galvenā navigācija">
+      <a href="index.html" class="nav-link">Sākums</a>
+      <a href="par-mani.html" class="nav-link current">Par mani</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="content-box" role="main">
+      <h2 class="page-title">PAR MANI</h2>
+
+      <div class="photo" aria-hidden="true">
+        <!-- SVG placeholder for image -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Attēla vieta">
+          <rect width="200" height="200" fill="#f2f2f2"/>
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="#999">Attēla vieta</text>
+        </svg>
+      </div>
+
+      <p class="description">Esmu radošs un mērķtiecīgs profesionālis, kas ar aizrautību strādā pie katra projekta. Piedāvāju individuālus risinājumus, kas balstās uz kvalitāti un sadarbību.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year2"></span> Mans Bizness</p>
+  </footer>
+
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
